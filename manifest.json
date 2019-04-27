@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "AWS Price Assistant",
+  "description": "Find out the real monthly or yearly cost of using AWS assets and resources.",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://aws.amazon.com/*/pricing/*"
+      ],
+      "js": [
+        "extension.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
