@@ -16,15 +16,11 @@ function updatePricing() {
     if (!inProgress) {
         inProgress = true;
 
-        console.log('Reading Page Data For AWS Price Assistant...');
+        console.log('Checking page for AWS Price Assistant hourly rates to convert...');
         const elements = document.getElementsByTagName('*');
 
-        for (var i = 0; i < elements.length; i++) {
-            const element = elements[i];
-
-            for (var j = 0; j < element.childNodes.length; j++) {
-                const node = element.childNodes[j];
-
+        for (const element of elements) {
+            for (const node of element.childNodes) {
                 if (node.nodeType === 3) {
                     const text = node.nodeValue.toLowerCase();
                     if (text.indexOf('per hour') > -1) {
