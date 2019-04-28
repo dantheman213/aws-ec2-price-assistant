@@ -4,6 +4,14 @@ const hoursInYear = 8760;
 let convertedElementCount = 0;
 let inProgress = false;
 
+// if a hyperlink or dropdown menu is clicked on check to see if new elements were created
+// (when selecting between instance types or regions)
+document.addEventListener('click', function(event) {
+    if (event.target.matches('a[href], a[href] *, ul, ul *')) {
+        startDelayedFunc();
+    }
+}, false);
+
 function updatePricing() {
     if (!inProgress) {
         inProgress = true;
@@ -73,7 +81,7 @@ function convertCurrencyToPrettyFormat(num) {
 }
 
 function startDelayedFunc() {
-    setTimeout(updatePricing, 500);
+    setTimeout(updatePricing, 750);
 }
 
 console.log('Starting AWS Price Assistant...');
