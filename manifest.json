@@ -3,7 +3,7 @@
   "name": "AWS EC2 Price Assistant",
   "description": "Find out the real monthly or yearly cost of using AWS assets and resources.",
   "homepage_url": "https://github.com/dantheman213/aws-ec2-price-assistant",
-  "version": "1.0",
+  "version": "1.1",
   "background": {
     "scripts": [
       "background.js"
